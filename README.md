@@ -28,6 +28,40 @@ Over-ride run-time to 2 minutes:
 docker run -it --rm --runtime nvidia --network host waggle/gpu-stress-test:latest -m 2
 ```
 
+When runnng docker image, when you issue `nvidia-smi` you can see it consumes GPU
+
+```bash
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A    139964      C   python3                          1107MiB |
++-----------------------------------------------------------------------------+
+root@nvidia-aie-PassTHRU3:~/gpu-stress-test# nvidia-smi 
+Sun Jul 17 14:06:02 2022       
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 515.48.07    Driver Version: 515.48.07    CUDA Version: 11.7     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|                               |                      |               MIG M. |
+|===============================+======================+======================|
+|   0  NVIDIA A100-PCI...  Off  | 00000000:0B:00.0 Off |                    0 |
+| N/A   44C    P0   167W / 250W |   1109MiB / 40960MiB |    100%      Default |
+|                               |                      |             Disabled |
++-------------------------------+----------------------+----------------------+
+                                                                               
++-----------------------------------------------------------------------------+
+| Processes:                                                                  |
+|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
+|        ID   ID                                                   Usage      |
+|=============================================================================|
+|    0   N/A  N/A    139964      C   python3                          1107MiB |
++-----------------------------------------------------------------------------+
+```
+
+
 ### Kubernetes Usage
 Default run-time:
 ```bash
