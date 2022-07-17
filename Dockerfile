@@ -1,5 +1,12 @@
-# docker build --no-cache --platform linux/amd64 -f Dockerfile . -t gpu-stress-test:0.2
+# To build faster (using previous cache)
+# docker build --platform linux/amd64 -f Dockerfile . -t gpu-stress-test:<label>
+# docker build --no-cache --platform linux/amd64 -f Dockerfile . -t gpu-stress-test:<label>
 # Heavily modified version of https://raw.githubusercontent.com/qts8n/cuda-python/master/devel/Dockerfile
+# https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html
+# sudo apt-get install -y nvidia-docker2
+# and then you can run
+#  docker run --gpus all  -it  gpu-stress-test:<label>
+#  docker run -it --rm --runtime nvidia --network host gpu-stress-test:<label>
 FROM nvidia/cuda:11.0.3-devel-ubuntu20.04
 LABEL maintainer="Omer Sen <omer.x.sen@gsk.com>"
 
@@ -22,7 +29,6 @@ RUN apt-get update && \
 
 RUN apt-get install -y build-essential
 
-#ENV GPG_KEY 0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D
 ENV GPG_KEY a035c8c19219ba821ecea86b64e628f8d684696d
 ENV PYTHON_VERSION 3.10.5
 
@@ -161,6 +167,7 @@ RUN set -ex; \
 		\) -exec rm -rf '{}' +; \
 	rm -f get-pip.py
 
+# Find matching versions at https://download.pytorch.org/whl/torch_stable.html
 RUN pip3 install torch==1.12.0+cu116 torchvision==0.13.0+cu116 torchaudio==0.12.0+cu116 cuda-python==11.6.1 -f https://download.pytorch.org/whl/torch_stable.html && rm -fr /root/.cache
 
 RUN apt-get -y autoremove \
