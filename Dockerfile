@@ -168,12 +168,12 @@ RUN set -ex; \
 	rm -f get-pip.py
 
 # Find matching versions at https://download.pytorch.org/whl/torch_stable.html
-RUN pip3 install torch==1.12.0+cu116 torchvision==0.13.0+cu116 torchaudio==0.12.0+cu116 cuda-python==11.6.1 -f https://download.pytorch.org/whl/torch_stable.html && rm -fr /root/.cache
+RUN pip3 install torch==1.12.0+cu116 torchvision==0.13.0+cu116 torchaudio==0.12.0+cu116 cuda-python==11.6.1 -f https://download.pytorch.org/whl/torch_stable.html && rm -fr ${HOME}/.cache
 
 RUN apt-get -y autoremove \
     && apt-get -y clean
 
 COPY . .
 
-ENTRYPOINT [ "python3", "stress.py"]
-CMD ["-m 5"]
+#ENTRYPOINT [ "python3", "stress.py"]
+#CMD ["-m 5"]
