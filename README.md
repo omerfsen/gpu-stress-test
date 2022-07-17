@@ -1,6 +1,6 @@
 # gpu-stress-test
 
-This is a simple piece of PyTorch code to stress test a GPU with a default run-time of 5 minutes.
+This is a simple piece of PyTorch code to stress test a GPU with a default run-time of 5 minutes. This test ran against A100 GPU
 
 ## Buildx building and pushing to Dockerhub
 
