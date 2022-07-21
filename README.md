@@ -1,4 +1,4 @@
-This is modified version of https://raw.githubusercontent.com/qts8n/cuda-python/master/devel/Dockerfile to use latest versions and to be compatible with Nvidia A100 (sm_80) 
+This is modified version of https://raw.githubusercontent.com/qts8n/cuda-python/master/devel/Dockerfile and https://github.com/waggle-sensor/gpu-stress-test to use latest versions and to be compatible with Nvidia A100 (sm_80) 
 
 # gpu-stress-test
 
