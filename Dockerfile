@@ -175,5 +175,5 @@ RUN apt-get -y autoremove \
 
 COPY . .
 
-#ENTRYPOINT [ "python3", "stress.py"]
-#CMD ["-m 5"]
+ENTRYPOINT [ "python3", "stress.py"]
+CMD ["-m 5"]
