@@ -25,7 +25,7 @@ Component versions:
 ## Buildx building and pushing to Dockerhub
 
 ```bash
-docker buildx build -t waggle/gpu-stress-test:latest --platform linux/amd64,linux/arm64 --push .
+docker buildx build -t omerfsen/gpu-stress-test:latest --platform linux/amd64,linux/arm64 --push .
 ```
 
 ## Build the Docker images
