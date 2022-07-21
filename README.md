@@ -7,16 +7,17 @@ This is a simple piece of PyTorch code to stress test a GPU with a default run-t
 Component versions:
 
 
-| Component              | Version      |
-| -----------            | -----------  |
-| Ubuntu                 | 20.04.4 LTS  |
-| PYTHON_VERSION         | 3.10.5       |
-| PYTHON_PIP_VERSION     | 22.1.2       |
-| pip3 torch             | 1.12.0+cu116 |
-| torchvision            | 0.13.0+cu116 |
-| torchaudio             | 0.12.0+cu116 |
-| cuda-python            | 11.6.1       |
-| cuda                   | cuda:11.0.3  |
+| Component                  | Version      |
+| -----------                | -----------  |
+| Ubuntu                     | 20.04.4 LTS  |
+| Nvidia Data Centre Driver  | 515.48.07    |
+| PYTHON_VERSION             | 3.10.5       |
+| PYTHON_PIP_VERSION         | 22.1.2       |
+| pip3 torch                 | 1.12.0+cu116 |
+| torchvision                | 0.13.0+cu116 |
+| torchaudio                 | 0.12.0+cu116 |
+| cuda-python                | 11.6.1       |
+| cuda                       | cuda:11.0.3  |
 
 * Pytorch does not support `Cuda 11.7` yet so we have used previous version `11.0.3` You can check https://download.pytorch.org/whl/torch_stable.html
 
