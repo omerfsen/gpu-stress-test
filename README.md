@@ -51,17 +51,13 @@ docker run -it --rm --runtime nvidia --network host omerfsen/gpu-stress-test:lat
 When runnng docker image, when you issue `nvidia-smi` you can see it consumes GPU
 
 ```bash
-+-----------------------------------------------------------------------------+
-| Processes:                                                                  |
-|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
-|        ID   ID                                                   Usage      |
-|=============================================================================|
-|    0   N/A  N/A    139964      C   python3                          1107MiB |
-+-----------------------------------------------------------------------------+
+
 root@nvidia-aie-PassTHRU3:~/gpu-stress-test# nvidia-smi 
-Sun Jul 17 14:06:02 2022       
+Sun Jul 17 14:06:02 2022    
+
+
 +-----------------------------------------------------------------------------+
-| NVIDIA-SMI 515.48.07    Driver Version: 515.48.07    CUDA Version: 11.7     |
+| NVIDIA-SMI 515.48.07    Driver Version: 515.48.07    CUDA Version: 11.0.3   |
 |-------------------------------+----------------------+----------------------+
 | GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
 | Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
