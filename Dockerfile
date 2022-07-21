@@ -143,9 +143,9 @@ RUN cd /usr/local/bin \
 	&& ln -s python3-config python-config
 
 # if this is called "PIP_VERSION", pip throws "ValueError: invalid truth value '<VERSION>'"
-ENV PYTHON_PIP_VERSION 22.1.2
+ENV PYTHON_PIP_VERSION 22.2
 ENV PYTHON_GET_PIP_URL https://bootstrap.pypa.io/pip/get-pip.py
-ENV PYTHON_GET_PIP_SHA256 ba3ab8267d91fd41c58dbce08f76db99f747f716d85ce1865813842bb035524d
+ENV PYTHON_GET_PIP_SHA256 d077d469ce4c0beaf9cc97b73f8164ad20e68e0519f14dd886ce35d053721501
 
 RUN set -ex; \
 	savedAptMark="$(apt-mark showmanual)"; \

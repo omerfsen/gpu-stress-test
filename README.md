@@ -12,7 +12,7 @@ Component versions:
 | Ubuntu                     | 20.04.4 LTS  |
 | Nvidia Data Centre Driver  | 515.48.07    |
 | PYTHON_VERSION             | 3.10.5       |
-| PYTHON_PIP_VERSION         | 22.1.2       |
+| PYTHON_PIP_VERSION         | 22.2         |
 | pip3 torch                 | 1.12.0+cu116 |
 | torchvision                | 0.13.0+cu116 |
 | torchaudio                 | 0.12.0+cu116 |
